@@ -3,15 +3,28 @@
     <form action="#">
         <div class="form-group">
             <label for="exampleInputEmail1">Usuario</label>
-            <input type="text" [(ngModel)]="userObj.user" required
-            class="form-control" aria-describedby="emailHelp" placeholder="Enter email"
+            <input type="text" [(ngModel)]="userObj.user" name="user" 
+            class="form-control"  placeholder="Ingrese usuario" required
             #user>
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" placeholder="Password" #password>
+            <input type="password"  [(ngModel)]="userObj.password" name="password"
+            class="form-control" placeholder="Ingrese password" required
+            #password>
         </div>
-        <button (click)="login()" class="btn btn-success m-1">Log in</button>
+        <button (click)="onLogin()" class="btn btn-success m-1">Log in</button>
     </form>
+    
+    <div>
+        <p class="alert alert-primary" 
+        *ngIf="getCode()=='01'">Sesion Iniciada</p>
+
+        <p class="alert alert-danger" 
+        *ngIf="getCode()=='99'">Credenciales incorrectas</p>
+    </div>
+
+
+
 
 </div>
