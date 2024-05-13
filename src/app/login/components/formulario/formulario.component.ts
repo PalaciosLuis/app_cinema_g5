@@ -1,14 +1,22 @@
 import { Component } from '@angular/core';
 import { LoginService } from '../../services/login.service';
 import { Usuario } from '../../interfaces/login.interface';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'login-formulario',
   templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.css'
+  styleUrl: './formulario.component.css',
+  imports: [FormsModule],
+  standalone: true
 })
 export class FormularioComponent {
-  constructor(private servicio: LoginService){}
+
+  userObj: Usuario;
+
+  constructor(private servicio: LoginService){
+    this.userObj = {user:"", password:""};
+  }
 
   public login():void {
     
