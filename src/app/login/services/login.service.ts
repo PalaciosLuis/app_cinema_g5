@@ -27,7 +27,8 @@ export class LoginService {
     this.http.post<LoginRespone>(this.apiUrl,
       JSON.stringify(user),{headers: this.headers})
     .subscribe(r => this.code = r.code)
-    console.log(this.code)
+
+    
   }
 
   constructor(private http:HttpClient) { }

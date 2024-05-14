@@ -1,0 +1,35 @@
+.navbar_routes {
+  background-color: rgb(2, 2, 34);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar_routes a {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar_routes a:hover {
+  color: #f5c518;
+}
+
+.section {
+  background-color: #f5c518;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+}
+
+.cartelera__movies {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px;
+}

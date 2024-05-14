@@ -7,10 +7,12 @@ import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MoviesComponent } from './peliculas/components/movies/movies.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     HomeModule,
     LoginModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
